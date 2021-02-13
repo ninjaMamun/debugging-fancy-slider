@@ -113,6 +113,8 @@ const changeSlide = (index) => {
   items[index].style.display = "block"
 }
 
+
+
 searchBtn.addEventListener('click', function () {
   document.querySelector('.main').style.display = 'none';
   clearInterval(timer);
@@ -124,3 +126,14 @@ searchBtn.addEventListener('click', function () {
 sliderBtn.addEventListener('click', function () {
   createSlider()
 })
+
+
+// enter btn press handler 
+const searchBox = document.getElementById("search");
+searchBox.addEventListener('keyup', function(event) { 
+  
+  if (event.key === 'Enter') { 
+      document.getElementById("search-btn").click(); 
+  } 
+}); 
+ 
