@@ -22,7 +22,13 @@ const showImages = (images) => {
   images.forEach(image => {
     let div = document.createElement('div');
     div.className = 'col-lg-3 col-md-4 col-xs-6 img-item mb-2';
-    div.innerHTML = ` <img class="img-fluid img-thumbnail" onclick=selectItem(event,"${image.webformatURL}") src="${image.webformatURL}" alt="${image.tags}">`;
+    div.innerHTML = ` <img class="img-fluid img-thumbnail" onclick=selectItem(event,"${image.webformatURL}") src="${image.webformatURL}" alt="${image.tags}">
+    <div class="image-body">
+      <p style="width: 45%;" class="d-inline-flex justify-content-start ml-2"> <i class="user fa fa-user-circle
+      mt-1" aria-hidden="true"></i>  ${image.user}</p> 
+      <p style="width: 40%;" class="d-inline-flex justify-content-end ml-3"><i class="views fa fa-eye mt-1" aria-hidden="true"></i>  ${image.views}</p>
+    </div>
+ `;
     gallery.appendChild(div)
 
   })
@@ -48,7 +54,7 @@ const selectItem = (event, img) => {
   if (item === -1) {
     sliders.push(img);
   } else {
-    sliders.pop();
+    sliders.splice(item, 1);
   }
 }
 var timer
