@@ -67,16 +67,20 @@ img {
 
 .image-body{
   padding-top: 10px;
-   background-color: rgb(221, 221, 221);
+   background-color: rgb(243, 239, 239);
    border-radius: 4px;
    margin: 3px;
+   
  }
  .user{
    color: #007bff;
    margin-right: 5px;
+   text-shadow: 1px 1px 2px #000000;
+   
  }
  .views{
    color: green;
    margin-right: 5px;
+   text-shadow: 1px 1px 2px #000000;
  }
  

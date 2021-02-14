@@ -7,6 +7,8 @@ const sliderContainer = document.getElementById('sliders');
 // selected image 
 let sliders = [];
 
+// My Api Key Which is not activated Yet so i use the defult one:
+//  20265212-77d4e3c1b56666cbf0123732d
 
 // If this key doesn't work
 // Find the name in the url and go to their website
